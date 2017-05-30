@@ -1,4 +1,4 @@
-package pl.noip.piekaa.jsession.ascii;
+package pl.noip.piekaa.jsession.ascii.image;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;

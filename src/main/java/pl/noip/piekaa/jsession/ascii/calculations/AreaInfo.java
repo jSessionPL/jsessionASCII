@@ -1,4 +1,4 @@
-package pl.noip.piekaa.jsession.ascii;
+package pl.noip.piekaa.jsession.ascii.calculations;
 
 public class AreaInfo 
 {	

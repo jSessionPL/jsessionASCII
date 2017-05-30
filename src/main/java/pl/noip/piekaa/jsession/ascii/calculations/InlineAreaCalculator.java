@@ -1,4 +1,4 @@
-package pl.noip.piekaa.jsession.ascii;
+package pl.noip.piekaa.jsession.ascii.calculations;
 
 public class InlineAreaCalculator implements AreaCalculator{
 
@@ -17,6 +17,7 @@ public class InlineAreaCalculator implements AreaCalculator{
 
 	public float calculate(int[][] array) {
 		long sum = 0;
+		float avgSum;
 		int count = 0;
 		for(int i = 0 ; i < array.length ;i ++)
 			for(int j = 0 ; j < array[i].length; j++)
@@ -26,9 +27,9 @@ public class InlineAreaCalculator implements AreaCalculator{
 				count++;
 			}
 		
-		sum /= count;
+		avgSum = sum / (float)count;
 		
-		return sum / 255.0f;
+		return avgSum / 255.0f;
 	}
 
 }

@@ -6,9 +6,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import pl.noip.piekaa.jsession.ascii.AreaCalculator;
-import pl.noip.piekaa.jsession.ascii.BnwDecoder;
-import pl.noip.piekaa.jsession.ascii.InlineAreaCalculator;
+import pl.noip.piekaa.jsession.ascii.calculations.AreaCalculator;
+import pl.noip.piekaa.jsession.ascii.calculations.BnwDecoder;
+import pl.noip.piekaa.jsession.ascii.calculations.InlineAreaCalculator;
 
 public class InlineAreaCalculatorTest 
 {
@@ -79,7 +79,7 @@ public class InlineAreaCalculatorTest
 		
 		for(int i  = 0 ; i < w ; i ++)
 			for(int j = 0; j < h ; j++)
-			array[i][j] = value;
+			array[i][j] = value | (value << 8) | (value << 16);
 		return array;
 	}
 	

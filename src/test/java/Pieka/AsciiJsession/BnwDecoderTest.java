@@ -1,7 +1,7 @@
 package Pieka.AsciiJsession;
 
+import static org.hamcrest.Matchers.lessThan;
 import static org.junit.Assert.*;
-import static org.hamcrest.Matchers.*;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -13,8 +13,8 @@ import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 
-import pl.noip.piekaa.jsession.ascii.BnwDecoder;
-import pl.noip.piekaa.jsession.ascii.ColorDecoder;
+import pl.noip.piekaa.jsession.ascii.calculations.BnwDecoder;
+import pl.noip.piekaa.jsession.ascii.calculations.ColorDecoder;
 
 
 public class BnwDecoderTest  

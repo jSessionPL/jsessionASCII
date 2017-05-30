@@ -1,6 +1,8 @@
-package pl.noip.piekaa.jsession.ascii;
+package pl.noip.piekaa.jsession.ascii.image;
 
 import java.awt.image.BufferedImage;
+
+import pl.noip.piekaa.jsession.ascii.calculations.AreaInfo;
 
 public class CuttingImageIterator implements ImageIterator
 {

@@ -1,16 +1,20 @@
 package pl.noip.piekaa.jsession.ascii;
 
+import pl.noip.piekaa.jsession.ascii.calculations.AreaCalculator;
+import pl.noip.piekaa.jsession.ascii.calculations.AreaInfo;
+import pl.noip.piekaa.jsession.ascii.image.ImageIterator;
+
 public class PiekaAsciiGenerator implements AsciiGenerator {
 
 	ImageIterator imageIterator;
 	AreaCalculator areaCalculator;
-	LetterProvider letterProvider;
+	ASCIIProvider letterProvider;
 
 	
 	
 	
 	public PiekaAsciiGenerator(ImageIterator imageIterator,
-			AreaCalculator areaCalculator, LetterProvider letterProvider) {
+			AreaCalculator areaCalculator, ASCIIProvider letterProvider) {
 		super();
 		this.imageIterator = imageIterator;
 		this.areaCalculator = areaCalculator;
@@ -30,7 +34,7 @@ public class PiekaAsciiGenerator implements AsciiGenerator {
 			if (areaInfo.isEndl())
 				asciiTextBuilder.append(letterProvider.getEndl());
 			else
-				asciiTextBuilder.append(letterProvider.getLetter(areaCalculator.calculate(areaInfo.getArea())));
+				asciiTextBuilder.append(letterProvider.getASCII(areaCalculator.calculate(areaInfo.getArea())));
 		}
 
 		return asciiTextBuilder.toString();

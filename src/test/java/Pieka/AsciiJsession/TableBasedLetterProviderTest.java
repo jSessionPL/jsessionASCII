@@ -6,36 +6,43 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import pl.noip.piekaa.jsession.ascii.LetterProvider;
-import pl.noip.piekaa.jsession.ascii.TableBasedLetterProvider;
+import pl.noip.piekaa.jsession.ascii.ASCIIProvider;
+import pl.noip.piekaa.jsession.ascii.TableBasedASCIIProvider;
 
 public class TableBasedLetterProviderTest 
 {
 	
-	LetterProvider letterProvider;
+	ASCIIProvider letterProvider;
 	
 	@Before
 	public void init()
 	{
-		letterProvider = new TableBasedLetterProvider("#a ");
+		letterProvider = new TableBasedASCIIProvider("#a ");
 	}
 	
 	
 	@Test
 	public void shouldReturnSpace()
 	{
-		assertEquals(' ', letterProvider.getLetter(1));
+		assertEquals(' ', letterProvider.getASCII(1));
 	}
 	
 	@Test
 	public void shouldReturnA()
 	{
-		assertEquals('a', letterProvider.getLetter(0.5f));
+		assertEquals('a', letterProvider.getASCII(0.5f));
 	}
 	@Test
 	public void shouldReturnHash()
 	{
-		assertEquals('#', letterProvider.getLetter(0));
+		assertEquals('#', letterProvider.getASCII(0));
 	}
+	
+	@Test
+	public void almost0Returnhash()
+	{
+		assertEquals('#', letterProvider.getASCII(.1f));
+	}
+	
 	
 }

@@ -1,20 +1,19 @@
 package pl.noip.piekaa.jsession.ascii;
 
-public class TableBasedLetterProvider implements LetterProvider
+public class TableBasedASCIIProvider implements ASCIIProvider
 {
 	String letterTable;
 	 
 	
 	
 	
-	public TableBasedLetterProvider(String letterTable) {
+	public TableBasedASCIIProvider(String letterTable) {
 		super();
 		this.letterTable = letterTable;
 	}
 
-	public char getLetter(float lightness) 
-	{ 
-		System.out.print(lightness);
+	public char getASCII(float lightness) 
+	{  
 		return letterTable.charAt( (int) (lightness * (letterTable.length()-1 ))  );
 	}
  

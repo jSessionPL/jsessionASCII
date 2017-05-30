@@ -8,9 +8,9 @@ import java.awt.image.BufferedImage;
 import org.junit.Before;
 import org.junit.Test;
 
-import pl.noip.piekaa.jsession.ascii.AreaInfo;
-import pl.noip.piekaa.jsession.ascii.CuttingImageIterator;
-import pl.noip.piekaa.jsession.ascii.ImageIterator;
+import pl.noip.piekaa.jsession.ascii.calculations.AreaInfo;
+import pl.noip.piekaa.jsession.ascii.image.CuttingImageIterator;
+import pl.noip.piekaa.jsession.ascii.image.ImageIterator;
 
 public class CuttingImageIteratorTest 
 {
